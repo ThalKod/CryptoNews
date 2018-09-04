@@ -1,18 +1,60 @@
 .header{
-    background: $dark-blue ;
-}
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	left: 0;
+	top: 0;
+	font-size: 14px;
+	height: 60px;
+	background: #7b4397; 
+	background: -webkit-linear-gradient(to right, #dc2430, #7b4397); 
+	background: linear-gradient(to right, #dc2430, #7b4397);
 
-.header__title{
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+
+	-webkit-transition: top 300ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+	-moz-transition: top 300ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+	-o-transition: top 300ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+	transition: top 300ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+.header.hide{
+	top: -60px;
+}
+.toggle-sidebar{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	cursor: pointer;
+	color: #FFF;
+	padding: 18px;
+	background-color: rgba(0,0,0,0.05);
+	float: left;
+}
+.logo-box{
+	width: 222px;
+    height: 27px;
+    margin-left: 20px;
+    margin-top: 10px;
+	display: block;
+    float: left;
     color: white;
-    text-decoration: none;
-    h1{
-        margin: 0;
-    }
+}
+.logo-box h1{
+	margin: 0;
+	padding: 0;
+    display: inline-block;
 }
 
-.header__content{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: $s-size 0 ;
+.logo-box h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+	width: 122px;
+	height: 27px;
+	display: block;
+	// background-image: url(../img/logo.png);
 }
