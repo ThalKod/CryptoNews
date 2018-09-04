@@ -1,3 +1,3 @@
-# expensify
-Expensify is a simple expense manager built with reactjs...
+# Crypto News
+Crypto News Feed site built with react js
 (Building...)
