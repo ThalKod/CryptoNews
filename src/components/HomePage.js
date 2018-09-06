@@ -5,6 +5,10 @@ import { startFetchHeadline } from "../actions/index";
 
 class HomePage extends React.Component{
 
+    state = {
+        headline: this.props.headline
+    }
+
     componentDidMount = ()=>{
         this.props.fetchHeadline();
     }
