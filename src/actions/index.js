@@ -1,0 +1,1 @@
+export const FETCH_HEADLINE = "FETCH_HEADLINE";
