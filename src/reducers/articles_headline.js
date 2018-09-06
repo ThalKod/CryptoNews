@@ -5,7 +5,6 @@ export default (state = [], action)=>{
         case FETCH_HEADLINE:
             return [...action.articles];
 
-
         default: 
             return state;
     }

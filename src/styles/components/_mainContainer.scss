@@ -1,0 +1,40 @@
+.main-container{
+	width: 100%;
+	margin-top: 60px;
+}
+.main-highlight{
+	height: auto;
+	background-color: #fff;
+	width: 100%;
+	overflow: hidden;
+}
+.sub-highlight{
+	min-height: 1px;
+}
+.highlight-carousel{
+	overflow: hidden;
+	padding: 10px;
+}
+
+.highlight-carousel .owl-dots{
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 30px;
+	bottom: 0;
+	text-align: center;
+}
+.highlight-carousel .owl-dots .owl-dot{
+	margin:0 3px;
+	outline: none;
+}
+.highlight-carousel .owl-dots .owl-dot span{
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: #FFF;
+	border-radius: 50%;
+}
+.highlight-carousel .owl-dots .owl-dot.active span{
+	background-color: #dc2430;
+}

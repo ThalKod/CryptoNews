@@ -9,13 +9,14 @@ const fetchHeadline = (articles)=>({
     articles
 });
 
+
 export const startFetchHeadline = ()=>{
     const HEADLINE_URL = `https://newsapi.org/v2/top-headlines?sources=crypto-coins-news&apiKey=${API_KEY}`;
 
     return (dispatch)=>{
         return axios.get(HEADLINE_URL).then((data)=>{
-            console.log(data.data);
+            console.log(data.data.articles);
             dispatch(fetchHeadline(data.data.articles));
-        })
+        });
     }
 }
