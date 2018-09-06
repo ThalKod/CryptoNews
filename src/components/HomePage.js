@@ -1,7 +1,13 @@
 import React from "react";
 import Header from "./Header";
+import { connect } from "react-redux";
+import { startFetchHeadline } from "../actions/index";
 
-export default class HomePage extends React.Component{
+class HomePage extends React.Component{
+
+    componentDidMount = ()=>{
+        this.props.fetchHeadline();
+    }
     render(){
         return (
             <div>
@@ -10,3 +16,9 @@ export default class HomePage extends React.Component{
         )
     }
 }
+
+const mapDispatchToProps = (dispatch)=>({
+    fetchHeadline: ()=> dispatch(startFetchHeadline())
+});
+
+export default connect(null, mapDispatchToProps)(HomePage);
