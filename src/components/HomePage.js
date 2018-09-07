@@ -2,12 +2,9 @@ import React from "react";
 import Header from "./Header";
 import { connect } from "react-redux";
 import { startFetchHeadline } from "../actions/index";
+import PageContent from "./PageContent";
 
 class HomePage extends React.Component{
-
-    state = {
-        headline: this.props.headline
-    }
 
     componentDidMount = ()=>{
         this.props.fetchHeadline();
@@ -17,11 +14,7 @@ class HomePage extends React.Component{
         return (
             <div>
                 <Header />
-                <div className="main-container">
-                    {this.props.headline.slice(0,3).map((article)=>{
-                        return <p>{article.title}</p>
-                    })}
-                </div>
+                <PageContent />
             </div>
         )
     }
@@ -31,8 +24,4 @@ const mapDispatchToProps = (dispatch)=>({
     fetchHeadline: ()=> dispatch(startFetchHeadline()),
 });
 
-const mapStateToProps = (state)=>({
-    headline: state.articlesHeadline
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default connect(null, mapDispatchToProps)(HomePage);

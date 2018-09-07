@@ -15,7 +15,6 @@ export const startFetchHeadline = ()=>{
 
     return (dispatch)=>{
         return axios.get(HEADLINE_URL).then((data)=>{
-            console.log(data.data.articles);
             dispatch(fetchHeadline(data.data.articles));
         });
     }
