@@ -12,8 +12,19 @@ class HeadlineGroup extends React.Component{
                     <div className="owl-carousel">
                         <div className="grid-rows">
                             {
-                                this.props.headline.slice(0,3).map((article)=>{
-                                    return <ArticleSingle {...article}  />
+                                this.props.headline.slice(0,3).map((article, index)=>{
+                                    if(index === 0){
+                                        return (
+                                            <div className="columns column-4">
+                                                <ArticleSingle  {...article}  />
+                                            </div>
+                                        )
+                                    }     
+                                    return (
+                                        <div className="columns column-2">
+                                            <ArticleSingle  {...article}  />
+                                        </div>
+                                    )
                                 })
                             }
                         </div>
