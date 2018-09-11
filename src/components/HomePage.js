@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "./Header";
 import { connect } from "react-redux";
-import { startFetchHeadline } from "../actions/index";
+import { startFetchHeadline, startFetchArticle, getArticle, nextArticles } from "../actions/index";
 import PageContent from "./PageContent";
 
 class HomePage extends React.Component{
 
     componentDidMount = ()=>{
         this.props.fetchHeadline();
+        this.props.fetchArticle();
     }
 
     render(){
@@ -22,6 +23,7 @@ class HomePage extends React.Component{
 
 const mapDispatchToProps = (dispatch)=>({
     fetchHeadline: ()=> dispatch(startFetchHeadline()),
+    fetchArticle: ()=> dispatch(startFetchArticle())
 });
 
 export default connect(null, mapDispatchToProps)(HomePage);
