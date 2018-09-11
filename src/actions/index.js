@@ -1,13 +1,19 @@
 import axios from "axios";
 
 export const FETCH_HEADLINE = "FETCH_HEADLINE";
+export const FECTH_ARTICLE = "FETCH_ARTICLE";
 
 const API_KEY = "c8ef108467b646219b3b8c85488ab725";
 
-const fetchHeadline = (articles)=>({
+const fetchHeadline = (headlines)=>({
     type: FETCH_HEADLINE,
-    articles
+    headlines
 });
+
+const fetchArticle = (articles)=>({
+    type: FECTH_ARTICLE,
+    articles
+}); 
 
 
 export const startFetchHeadline = ()=>{
@@ -18,4 +24,16 @@ export const startFetchHeadline = ()=>{
             dispatch(fetchHeadline(data.data.articles));
         });
     }
+}
+
+
+export const startFetchArticle = ()=>{
+    const ARTICLE_URL = `https://newsapi.org/v2/everything?sources=crypto-coins-news&apiKey=${API_KEY}`;
+
+    return (dispatch)=>{
+        return axios.get(ARTICLE_URL).then((data)=>{
+            dispatch(fetchArticle(data.data.articles))
+        });
+    }
+
 }
