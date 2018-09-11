@@ -14,11 +14,11 @@ export default class ArticleSingle extends React.Component{
                             </div>
                             <div className="post-meta-author-info">
                                 <span className="post-meta-author-name">
-                                    <a href="https://www.ccn.com" title="Posts by John Doe" rel="author">{this.props.source.name}</a>
+                                    <a href="https://www.ccn.com" title="Posts by CCN" rel="author">{this.props.source.name}</a>
                                 </span>
                                 <span className="middot">·</span>
                                 <span className="post-meta-date">
-                                    <abbr className="published updated" title="December 4, 2017">{moment(this.props.publishedAt).format(" D MMMM YYYY")}</abbr>
+                                    <abbr className="published updated" title="Date">{moment(this.props.publishedAt).format(" D MMMM YYYY")}</abbr>
                                 </span>
                             </div>
                         </div>
