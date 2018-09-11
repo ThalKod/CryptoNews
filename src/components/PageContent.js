@@ -1,6 +1,7 @@
 import React from "react";
 
 import HeadlineGroup from "./HeadlineGroup";
+import MainContent from "./MainContent";
 
 export default class PageContent extends React.Component{
     
@@ -8,6 +9,7 @@ export default class PageContent extends React.Component{
         return (
             <div className="main-container">
                 <HeadlineGroup />
+                <MainContent />
             </div>
         ) 
     }
