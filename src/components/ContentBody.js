@@ -13,7 +13,6 @@ class ContentBody extends React.Component{
 
 
     render(){
-        
         return (
             <div className="content-body">
                 <div className="content-timeline">
@@ -21,9 +20,11 @@ class ContentBody extends React.Component{
                         <span class="post-list-title">Latest News</span>
                     </div>
                 </div>
-                {this.props.articles.map((article, index)=>{
-                    return <ArticleListItems key={index} article={article} />
-                })}
+                <div className="timeline-items">
+                    {this.props.articles.map((article, index)=>{
+                        return <ArticleListItems key={index} article={article} />
+                    })}
+                </div>
             </div>
         );
     }
