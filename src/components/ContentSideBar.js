@@ -1,6 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 
-export default class ContentSideBar extends React.Component{
+import PopularListItem from "./PopularListItem";
+
+class ContentSideBar extends React.Component{
     render(){
         return (
             <div className="content-sidebar">
@@ -10,9 +13,27 @@ export default class ContentSideBar extends React.Component{
                             <div class="w-title">Popular News</div>
                             <div class="w-seperator"></div>
                         </div>
+                        {this.props.randomArticles.map((article)=>{
+                            return <PopularListItem article={article} />
+                        })}
                     </div>
                 </div>
             </div>
         );
     }
 }
+
+const mapStateToProps = (state)=>{
+    const articles = state.articles.articles;
+    const randomArticles = [];
+
+    for(let i = 0; i < 3; i++){
+        const rn = Math.floor(Math.random()*articles.length);
+        randomArticles.push(articles[rn]);
+    }
+
+    console.log(randomArticles);
+    return { randomArticles };
+};
+
+export default connect(mapStateToProps)(ContentSideBar);
