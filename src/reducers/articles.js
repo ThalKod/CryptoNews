@@ -3,11 +3,11 @@ import { FECTH_ARTICLE, GET_ARTICLE, NEXT_ } from "../actions/index";
 export default (state = {articles: [], lastIndex: 0, toShow:[] }, action)=>{
     switch(action.type){
         case FECTH_ARTICLE: 
-            console.log("Fetch_article: ",{ ...state, articles: action.articles });
+            // console.log("Fetch_article: ",{ ...state, articles: action.articles });
             return { ...state, articles: action.articles };
 
         case GET_ARTICLE: 
-            console.log("GET_ARTICLE", { ...state, toShow: state.articles.slice(0,10), lastIndex: 10 });
+            // console.log("GET_ARTICLE", { ...state, toShow: state.articles.slice(0,10), lastIndex: 10 });
             return { ...state, toShow: state.articles.slice(0,10), lastIndex: 10}
 
         case NEXT_: 

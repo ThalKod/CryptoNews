@@ -32,7 +32,6 @@ const mapStateToProps = (state)=>{
         randomArticles.push(articles[rn]);
     }
 
-    console.log(randomArticles);
     return { randomArticles };
 };
 
