@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
+import Header from "../components/Header";
 import { connect } from "react-redux";
-import { startFetchHeadline, startFetchArticle} from "../actions/index";
-import PageContent from "./PageContent";
+import { startFetchHeadline, startFetchArticle} from "../actions";
+import PageContent from "../components/PageContent";
 
 class HomePage extends React.Component{
 

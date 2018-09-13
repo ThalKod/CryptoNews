@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import ArticleSingle from "./ArticleSingle";
+import ArticleSingle from "../components/ArticleSingle";
 
 class HeadlineGroup extends React.Component{
 

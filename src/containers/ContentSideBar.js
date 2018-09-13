@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import PopularListItem from "./PopularListItem";
+import PopularListItem from "../components/PopularListItem";
 
 class ContentSideBar extends React.Component{
     render(){

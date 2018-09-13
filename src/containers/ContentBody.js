@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import ArticleListItems from "./ArticleListItems";
-import { getArticle } from  "../actions/index";
+import ArticleListItems from "../components/ArticleListItems";
+import { getArticle } from  "../actions";
 
 class ContentBody extends React.Component{
 
