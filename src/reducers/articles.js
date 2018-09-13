@@ -12,7 +12,7 @@ export default (state = {articles: [], lastIndex: 0, toShow:[] }, action)=>{
 
         case NEXT_: 
             // console.log("NEXT_", { ...state, toShow: state.toShow.concat(state.articles.slice(state.lastIndex + 1, state.lastIndex + 10)), lastIndex: state.lastIndex + 10 });
-            return { ...state, toShow: state.toShow.concat(state.articles.slice(state.lastIndex + 1, state.lastIndex + 10)), lastIndex: state.lastIndex + 10 }
+            return { ...state, toShow: state.toShow.concat(state.articles.slice(state.lastIndex + 1, state.lastIndex + 5)), lastIndex: state.lastIndex + 5 }
 
         default:
             return state;
