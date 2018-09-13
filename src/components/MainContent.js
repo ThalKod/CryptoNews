@@ -1,7 +1,7 @@
 import React from "react";
 
-import ContentBody from "./ContentBody";
-import ContentSideBar from "./ContentSideBar";
+import ContentBody from "../containers/ContentBody";
+import ContentSideBar from "../containers/ContentSideBar";
 
 export default class MainContent extends React.Component{
     render(){

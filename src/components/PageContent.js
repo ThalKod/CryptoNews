@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeadlineGroup from "./HeadlineGroup";
+import HeadlineGroup from "../containers/HeadlineGroup";
 import MainContent from "./MainContent";
 
 export default class PageContent extends React.Component{
