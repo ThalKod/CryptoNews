@@ -25,7 +25,11 @@ class ContentBody extends React.Component{
                             return <ArticleListItems key={index} article={article} />
                         })}
                     </div>
-                    <LoadMore next={()=> this.props.getNext()} />
+                    {
+                        this.props.articles.length < this.props.totalArticles.length ? 
+                            <LoadMore next={()=> this.props.getNext()} /> : null
+                    }
+                    
                 </div>
             </div>
         );
@@ -34,6 +38,7 @@ class ContentBody extends React.Component{
 
 const mapStateToProps = (state)=>({
     articles: state.articles.toShow,
+    totalArticles: state.articles.articles,
 });
 
 const mapDispatchToProps = (dispatch)=>({
