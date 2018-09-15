@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { connect } from "react-redux";
 import { startFetchHeadline, startFetchArticle} from "../actions";
 import PageContent from "../components/PageContent";
+import LoadingPage from "../components/LoadingPage";
 
 class HomePage extends React.Component{
 
@@ -21,7 +22,7 @@ class HomePage extends React.Component{
                 </div>
             )
         }else{
-            return <div>Loading...</div>
+            return <LoadingPage />
         }
     }
 }
