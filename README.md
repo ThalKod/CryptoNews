@@ -14,6 +14,10 @@ $ git clone https://github.com/ThalKod/CryptoNews.git
 # install the node modules...
 $ npm install
 
+# build the app
+$ npm run build:dev
+
+# starting up
 npm start
 
 ```
