@@ -5,8 +5,13 @@
 
 CryptoNews is a news feed site, fecthing cryptocurrency related news from ccn, built with React. [Demo](https://cryptfeed.herokuapp.com/)
 
+## Built With
 
-# :floppy_disk: Installation
+* [React](https://github.com/facebook/react) - A declarative, efficient, and flexible JavaScript library for building user interfaces.
+* [Redux](https://github.com/reduxjs/redux) - Predictable state container for JavaScript apps
+* [Nodejs](https://github.com/nodejs/node) - Node.js JavaScript runtime
+
+## :floppy_disk: Installation
 
 ```bash
 # clone the repo
