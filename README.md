@@ -1,9 +1,10 @@
 # Crypto News
 
-![Crypto News](https://github.com/ThalKod/CryptoNews/blob/master/screenshot.png)
+![Crypto News](https://github.com/ThalKod/CryptoNews/blob/master/screenshot.png) 
 
 
-CryptoNews is a news feed site, fecthing cryptocurrency related news from ccn, built with React.
+CryptoNews is a news feed site, fecthing cryptocurrency related news from ccn, built with React. [Demo](https://cryptfeed.herokuapp.com/)
+
 
 # :floppy_disk: Installation
 
