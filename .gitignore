@@ -5,6 +5,7 @@ public/style.css
 public/style.css.map
 .DS_Store
 text.js
+api_key.js
 playground/
 .env.test
 .env.developement
