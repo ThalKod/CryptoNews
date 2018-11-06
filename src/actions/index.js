@@ -1,11 +1,11 @@
 import axios from "axios";
+import API_KEY from "../../api_key";
 
 export const FETCH_HEADLINE = "FETCH_HEADLINE";
 export const FECTH_ARTICLE = "FETCH_ARTICLE";
 export const GET_ARTICLE = "GET_ARTICLE";
 export const NEXT_ = "NEXT";
 
-const API_KEY = "c8ef108467b646219b3b8c85488ab725";
 
 const fetchHeadline = (headlines)=>({
     type: FETCH_HEADLINE,
