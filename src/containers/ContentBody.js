@@ -17,8 +17,8 @@ class ContentBody extends React.Component{
         return (
             <div className="content-body">
                 <div className="content-timeline">
-                    <div class="post-list-header">
-                        <span class="post-list-title">Latest News</span>
+                    <div className="post-list-header">
+                        <span className="post-list-title">Latest News</span>
                     </div>
                     <div className="timeline-items">
                         {this.props.articles.map((article, index)=>{

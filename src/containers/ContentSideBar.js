@@ -9,9 +9,9 @@ class ContentSideBar extends React.Component{
             <div className="content-sidebar">
                 <div className="sidebar_inner">
                     <div className="widget-item">
-                        <div class="w-header">
-                            <div class="w-title">Popular News</div>
-                            <div class="w-seperator"></div>
+                        <div className="w-header">
+                            <div className="w-title">Popular News</div>
+                            <div className="w-seperator"></div>
                         </div>
                         {this.props.randomArticles.map((article)=>{
                             return <PopularListItem article={article} />

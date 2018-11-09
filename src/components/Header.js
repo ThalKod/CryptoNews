@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export default class Header extends React.Component{
     render(){
         return(
-            <header class="header">
-                <div class="header-wrapper">
+            <header className="header">
+                <div className="header-wrapper">
 
-                    <div class="logo-box">
+                    <div className="logo-box">
                         <h1>    
                             <Link to="/">
                                 Crypto News

@@ -35,8 +35,8 @@ export const startFetchHeadline = ()=>{
     }
 }
 
-
 export const startFetchArticle = ()=>{
+
     const ARTICLE_URL = `https://newsapi.org/v2/everything?sources=crypto-coins-news&apiKey=${API_KEY}`;
 
     return (dispatch)=>{

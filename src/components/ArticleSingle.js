@@ -6,7 +6,7 @@ export default class ArticleSingle extends React.Component{
         return (
                 <div className="post-box" style={{ backgroundImage: `url(${this.props.urlToImage})` }}>
                     <div className="post-overlay">
-                        <p class="post-category" title="Title of blog post" rel="tag">Cryptocurrency</p>
+                        <p className="post-category" title="Title of blog post" rel="tag">Cryptocurrency</p>
                         <h3 className="post-title">{this.props.title}</h3>
                         <div className="post-meta">
                             <div className="post-meta-author-avatar">

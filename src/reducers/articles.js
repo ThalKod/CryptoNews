@@ -1,6 +1,7 @@
 import { FECTH_ARTICLE, GET_ARTICLE, NEXT_ } from "../actions/index";
 
 export default (state = {articles: [], lastIndex: 0, toShow:[] }, action)=>{
+
     switch(action.type){
         case FECTH_ARTICLE: 
             // console.log("Fetch_article: ",{ ...state, articles: action.articles });
