@@ -13,8 +13,8 @@ class ContentSideBar extends React.Component{
                             <div className="w-title">Popular News</div>
                             <div className="w-seperator"></div>
                         </div>
-                        {this.props.randomArticles.map((article)=>{
-                            return <PopularListItem article={article} />
+                        {this.props.randomArticles.map((article, index)=>{
+                            return <PopularListItem key={index} article={article} />
                         })}
                     </div>
                 </div>

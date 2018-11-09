@@ -16,13 +16,13 @@ class HeadlineGroup extends React.Component{
                                     if(index === 0){
                                         return (
                                             <div className="columns column-4">
-                                                <ArticleSingle  {...article}  />
+                                                <ArticleSingle key={index}  {...article}  />
                                             </div>
                                         )
                                     }     
                                     return (
                                         <div className="columns column-2">
-                                            <ArticleSingle  {...article}  />
+                                            <ArticleSingle key={index}  {...article}  />
                                         </div>
                                     )
                                 })
