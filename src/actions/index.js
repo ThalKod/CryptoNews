@@ -25,7 +25,7 @@ export const nextArticles = ()=>({
 });
 
 export const startFetchHeadline = ()=>{
-    const HEADLINE_URL = `https://newsapi.org/v2/top-headlines?sources=crypto-coins-news&apiKey=${process.env.API_KEY || "c8ef108467b646219b3b8c85488ab725"}`;
+    const HEADLINE_URL = `https://newsapi.org/v2/top-headlines?sources=crypto-coins-news&apiKey=${process.env.API_KEY}`;
 
     return (dispatch)=>{
         return axios.get(HEADLINE_URL).then((data)=>{
@@ -36,7 +36,7 @@ export const startFetchHeadline = ()=>{
 
 export const startFetchArticle = ()=>{
 
-    const ARTICLE_URL = `https://newsapi.org/v2/everything?sources=crypto-coins-news&apiKey=${process.env.API_KEY || "c8ef108467b646219b3b8c85488ab725"}`;
+    const ARTICLE_URL = `https://newsapi.org/v2/everything?sources=crypto-coins-news&apiKey=${process.env.API_KEY}`;
 
     return (dispatch)=>{
         return axios.get(ARTICLE_URL).then((data)=>{

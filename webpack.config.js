@@ -11,6 +11,8 @@ if(process.env.NODE_ENV === "test"){
     env =  dotenv.config({ path: ".env.test" }).parsed;
 }else if (process.env.NODE_ENV === "developement"){
     env =  dotenv.config({ path: ".env.developement" }).parsed;
+}else if (process.env.config === "production"){
+    env.API_KEY = "c8ef108467b646219b3b8c85488ab725";
 }
 
 module.exports = () =>{
