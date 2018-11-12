@@ -1,5 +1,4 @@
 import axios from "axios";
-import API_KEY from "../../api_key";
 
 export const FETCH_HEADLINE = "FETCH_HEADLINE";
 export const FECTH_ARTICLE = "FETCH_ARTICLE";
@@ -26,7 +25,7 @@ export const nextArticles = ()=>({
 });
 
 export const startFetchHeadline = ()=>{
-    const HEADLINE_URL = `https://newsapi.org/v2/top-headlines?sources=crypto-coins-news&apiKey=${API_KEY}`;
+    const HEADLINE_URL = `https://newsapi.org/v2/top-headlines?sources=crypto-coins-news&apiKey=${process.env.API_KEY}`;
 
     return (dispatch)=>{
         return axios.get(HEADLINE_URL).then((data)=>{
@@ -37,7 +36,7 @@ export const startFetchHeadline = ()=>{
 
 export const startFetchArticle = ()=>{
 
-    const ARTICLE_URL = `https://newsapi.org/v2/everything?sources=crypto-coins-news&apiKey=${API_KEY}`;
+    const ARTICLE_URL = `https://newsapi.org/v2/everything?sources=crypto-coins-news&apiKey=${process.env.API_KEY}`;
 
     return (dispatch)=>{
         return axios.get(ARTICLE_URL).then((data)=>{
