@@ -2,13 +2,14 @@ const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const dotenv = require("dotenv");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "developement";
 
 if(process.env.NODE_ENV === "test"){
-    require("dotenv").config({ path: ".env.test" });
+    dotenv.config({ path: ".env.test" });
 }else if (process.env.NODE_ENV === "developement"){
-    require("dotenv").config({ path: ".env.developement" });
+    dotenv.config({ path: ".env.developement" });
 }
 
 module.exports = () =>{
