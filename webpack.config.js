@@ -6,16 +6,14 @@ const dotenv = require("dotenv");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "developement";
 
+let env;
 if(process.env.NODE_ENV === "test"){
-    dotenv.config({ path: ".env.test" });
+    env =  dotenv.config({ path: ".env.test" }).parsed;
 }else if (process.env.NODE_ENV === "developement"){
-    dotenv.config({ path: ".env.developement" });
+    env =  dotenv.config({ path: ".env.developement" }).parsed;
 }
 
 module.exports = () =>{
-
-    const env = dotenv.config().parsed;
-
 
     const isProduction =  env === "production";
     const CSSExtract = new ExtractTextPlugin("style.css");
