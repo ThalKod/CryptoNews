@@ -6,16 +6,8 @@ const dotenv = require("dotenv");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "developement";
 
-let env;
-if(process.env.NODE_ENV === "test"){
-    env =  dotenv.config({ path: ".env.test" }).parsed;
-}else if (process.env.NODE_ENV === "developement"){
-    env =  dotenv.config({ path: ".env.developement" }).parsed;
-}else if (process.env.config === "production"){
-    env.API_KEY = "c8ef108467b646219b3b8c85488ab725";
-}
 
-module.exports = () =>{
+module.exports = (env) =>{
 
     const isProduction =  env === "production";
  
@@ -48,9 +40,6 @@ module.exports = () =>{
                 // both options are optional
                 filename:  "style.css", // devMode ? 'style.css' : 'style.[hash].css',
                 chunkFilename: "[id].css"  // devMode ? '[id].css' : '[id].[hash].css',
-              }),
-              new webpack.DefinePlugin({
-                  "process.env.API_KEY": JSON.stringify(`${env.API_KEY}`) 
               })
         ],
         devtool: isProduction ? "source-map" : "inline-source-map",
