@@ -53,7 +53,7 @@
     "uuid": "^3.3.2",
     "validator": "^10.8.0",
     "webpack": "^4.20.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.10"
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
