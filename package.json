@@ -30,7 +30,7 @@
     "firebase": "^5.7.0",
     "history": "^4.7.2",
     "jest": "^23.6.0",
-    "live-server": "^1.2.0",
+    "live-server": "^1.2.1",
     "moment": "^2.22.2",
     "moxios": "^0.4.0",
     "node-sass": "^4.9.3",
